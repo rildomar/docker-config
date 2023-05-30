@@ -11,7 +11,8 @@ sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 
 echo "Install Docker Engine"
 sudo apt-get update
-sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+# -y auto accept when requied
+sudo apt-get install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 
 echo "Permission run docker without sudo"
 sudo usermod -aG docker $USER
